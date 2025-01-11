@@ -98,6 +98,11 @@
         color: var(--rose-800);
     }
 
+    ol , ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
     ol li + li , ul li + li {
         margin-top: 16px;
     }
@@ -137,6 +142,11 @@
 
     .preparation ul li span {
         font-weight: 700;
+    }
+
+    section:not(:last-of-type) {
+        border-bottom: 2px solid var(--stone-150);
+        padding-bottom: 24px;
     }
 }
 
