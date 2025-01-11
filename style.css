@@ -1,0 +1,101 @@
+@layer reset, theme, global, layout, module;
+
+@font-face {
+    font-family: 'Outfit';
+    src: url("./assets/fonts/Outfit/Outfit.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Young Serif";
+    src: url("./assets/fonts/young-serif/young-serif.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@layer reset {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: unset;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    img,
+    picture,
+    svg,
+    canvas {
+        display: block;
+        max-inline-size: 100%;
+        height: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer theme {
+    :root {
+        --white: hsl(0, 0%, 100%);
+
+        --stone-100: hsl(30 54% 90%);
+        --stone-150: hsl(30 18% 87%);
+        --stone-600: hsl(30 10% 34%);
+        --stone-900: hsl(24 5% 18%);
+
+        --brown-800: hsl(14 45% 36%);
+
+        --rose-800: hsl(332 51% 32%);
+        --rose-50: hsl(330 100% 98%);
+
+        --base-font: 1rem;
+
+        font-size: var(--base-font);
+    }
+}
+
+@layer global {
+    body {
+        font-family: 'Outfit', sans-serif;
+        background-color: var(--stone-100);
+        color: var(--stone-600);
+    }
+
+    h1, h2 {
+        font-family: 'Young Serif', serif;
+        font-weight: 400;
+    }
+}
+
+@layer layout {
+    .container {
+        max-inline-size: 1000px;
+        margin-inline: auto;
+        background-color: var(--white);
+        padding-inline: 28px;
+    }
+}
+
+@layer modules {
+    .image-container {
+        margin-inline: -28px;
+    }
+}
+
+
