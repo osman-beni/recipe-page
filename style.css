@@ -12,6 +12,8 @@
 }
 
 @layer reset {
+
+
     *,
     *::before,
     *::after {
@@ -67,19 +69,37 @@
         --base-font: 1rem;
 
         font-size: var(--base-font);
+
+        --font-body: 'Outfit';
+        --font-heading: 'Young Serif';
     }
 }
 
 @layer global {
     body {
-        font-family: 'Outfit', sans-serif;
+        font-family: var(--font-body), sans-serif;
         background-color: var(--stone-100);
         color: var(--stone-600);
+        line-height: 1.5;
     }
 
     h1, h2 {
-        font-family: 'Young Serif', serif;
+        font-family: var(--font-heading), serif;
         font-weight: 400;
+    }
+
+    h1 {
+        color: var(--stone-900);
+        line-height: 1.1;
+        margin-block: 32px 28px;
+    }
+
+    h2 {
+        color: var(--rose-800);
+    }
+
+    ol li + li , ul li + li {
+        margin-top: 16px;
     }
 }
 
@@ -95,6 +115,28 @@
 @layer modules {
     .image-container {
         margin-inline: -28px;
+    }
+
+    .preparation {
+        background-color: var(--rose-50);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .preparation h2 {
+        font-family: var(--font-body), serif;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .preparation ul {
+        padding: 0;
+        list-style-position: inside;
+    }
+
+    .preparation ul li span {
+        font-weight: 700;
     }
 }
 
