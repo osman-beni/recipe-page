@@ -110,6 +110,11 @@
         margin-top: 16px;
     }
 
+    ol li::marker {
+        color: var(--rose-800);
+        font-weight: 700;
+    }
+
     section li {
         padding-left: 16px;
         margin-left: 16px;
