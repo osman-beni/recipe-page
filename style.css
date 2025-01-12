@@ -123,13 +123,31 @@
         margin-inline: auto;
         background-color: var(--white);
         padding-inline: 28px;
+
+        @media (width > 1000px) {
+            margin-block: 56px;
+            margin-inline: 32px;
+            padding-block: 28px;
+            border-radius: 20px;
+        }
+
+        @media (width > 1080px) {
+            margin-inline: auto;
+        }
     }
 }
 
 @layer modules {
     .image-container {
         margin-inline: -28px;
+
+        @media (width > 1000px) {
+            margin-inline: auto;
+            border-radius: 10px;
+            overflow: clip;
+        }
     }
+
 
     .preparation {
         background-color: var(--rose-50);
@@ -173,9 +191,9 @@
         border-bottom: 1px solid var(--stone-150);
     }
 
-   .nutrition table td {
-       padding: 14px 24px;
-   }
+    .nutrition table td {
+        padding: 14px 24px;
+    }
 
     .nutrition td:last-of-type {
         color: var(--rose-800);
