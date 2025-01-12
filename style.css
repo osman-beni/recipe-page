@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Outfit';
-    src: url("./assets/fonts/Outfit/Outfit.ttf") format("truetype");
+    src: url("./assets/fonts/Outfit.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Young Serif";
-    src: url("./assets/fonts/young-serif/young-serif.ttf") format("truetype");
+    src: url("./assets/fonts/young-serif.woff2") format("woff2");
     font-weight: normal;
 }
 
