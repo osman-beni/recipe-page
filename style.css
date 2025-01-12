@@ -72,6 +72,9 @@
 
         --font-body: 'Outfit';
         --font-heading: 'Young Serif';
+
+        accent-color: var(--rose-800);
+        color-scheme: light;
     }
 }
 
@@ -96,16 +99,22 @@
 
     h2 {
         color: var(--rose-800);
+        font-size: 1.75rem;
     }
 
-    ol , ul {
+    ol, ul {
         padding-left: 0;
-        list-style-position: inside;
     }
 
-    ol li + li , ul li + li {
+    ol li + li, ul li + li {
         margin-top: 16px;
     }
+
+    section li {
+        padding-left: 16px;
+        margin-left: 16px;
+    }
+
 }
 
 @layer layout {
@@ -147,7 +156,33 @@
     section:not(:last-of-type) {
         border-bottom: 2px solid var(--stone-150);
         padding-bottom: 24px;
+
     }
+
+    .instructions ol li span {
+        font-weight: 700;
+    }
+
+    .nutrition table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .nutrition table td:not(tr:last-child td) {
+        border-bottom: 1px solid var(--stone-150);
+    }
+
+   .nutrition table td {
+       padding: 14px 24px;
+   }
+
+    .nutrition td:last-of-type {
+        color: var(--rose-800);
+        font-weight: 700;
+    }
+
+
 }
 
 
