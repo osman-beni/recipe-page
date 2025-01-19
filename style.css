@@ -124,7 +124,7 @@
 
 @layer layout {
     .container {
-        max-inline-size: 1000px;
+        max-inline-size: 700px;
         margin-inline: auto;
         background-color: var(--white);
         padding-inline: 28px;
